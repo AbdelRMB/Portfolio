@@ -1,0 +1,58 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="2" fill="#ffffff" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgGradient)"/>
+  <rect width="400" height="300" fill="url(#dots)"/>
+  
+  <!-- Main container -->
+  <rect x="50" y="50" width="300" height="200" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" rx="12" opacity="0.95"/>
+  
+  <!-- Header -->
+  <rect x="60" y="60" width="280" height="40" fill="#f7fafc" stroke="#e2e8f0" stroke-width="1" rx="6"/>
+  
+  <!-- Navigation dots -->
+  <circle cx="80" cy="80" r="4" fill="#ff6b6b"/>
+  <circle cx="100" cy="80" r="4" fill="#4ecdc4"/>
+  <circle cx="120" cy="80" r="4" fill="#ffe66d"/>
+  
+  <!-- Content blocks -->
+  <rect x="70" y="120" width="120" height="8" fill="#a0aec0" rx="4"/>
+  <rect x="200" y="120" width="80" height="8" fill="#cbd5e0" rx="4"/>
+  
+  <rect x="70" y="140" width="90" height="6" fill="#e2e8f0" rx="3"/>
+  <rect x="170" y="140" width="110" height="6" fill="#e2e8f0" rx="3"/>
+  
+  <rect x="70" y="155" width="140" height="6" fill="#e2e8f0" rx="3"/>
+  <rect x="220" y="155" width="60" height="6" fill="#e2e8f0" rx="3"/>
+  
+  <!-- Sidebar -->
+  <rect x="290" y="120" width="40" height="100" fill="#f7fafc" stroke="#e2e8f0" stroke-width="1" rx="4"/>
+  
+  <!-- Sidebar items -->
+  <rect x="295" y="130" width="30" height="4" fill="#cbd5e0" rx="2"/>
+  <rect x="295" y="140" width="25" height="4" fill="#e2e8f0" rx="2"/>
+  <rect x="295" y="150" width="30" height="4" fill="#cbd5e0" rx="2"/>
+  
+  <!-- Button -->
+  <rect x="70" y="180" width="60" height="25" fill="#4299e1" stroke="#3182ce" stroke-width="1" rx="6"/>
+  <text x="100" y="195" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">Action</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="320" cy="70" r="8" fill="#fbb6ce" opacity="0.7"/>
+  <circle cx="340" cy="90" r="6" fill="#9ae6b4" opacity="0.7"/>
+  <circle cx="360" cy="75" r="5" fill="#faf089" opacity="0.7"/>
+  
+  <!-- Title -->
+  <text x="200" y="285" text-anchor="middle" fill="#4a5568" font-family="sans-serif" font-size="14" font-weight="bold">
+    Projet Placeholder
+  </text>
+</svg>
