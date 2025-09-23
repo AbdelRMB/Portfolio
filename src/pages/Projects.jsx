@@ -20,7 +20,7 @@ const Projects = () => {
 
   useEffect(() => {
     // Charger les projets depuis l'API
-    fetch('http://localhost:5000/api/projects')
+    fetch('https://api.abdelrahimriche.com/api/projects')
       .then(res => res.json())
       .then(data => {
         // S'assurer que data est un tableau

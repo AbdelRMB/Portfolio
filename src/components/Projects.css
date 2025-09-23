@@ -26,7 +26,7 @@
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.2rem !important;
   text-align: center;
   color: #2E7D32;
   margin-bottom: 3rem;
@@ -63,7 +63,7 @@
 }
 
 .loading-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #2E7D32;
   font-family: 'Press Start 2P', monospace;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
@@ -214,7 +214,7 @@
 }
 
 .item-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #2E7D32;
   margin-bottom: 0.5rem;

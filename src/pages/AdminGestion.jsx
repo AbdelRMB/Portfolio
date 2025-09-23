@@ -46,7 +46,7 @@ const AdminGestion = () => {
     'Real-time Apps'
   ];
 
-  const contractTypes = ['CDI', 'CDD', 'Stage', 'Freelance', 'Alternance'];
+  const contractTypes = ['CDI', 'CDD', 'Stage', 'Freelance', 'Alternance', 'Intérim'];
 
   // Charger les données
   useEffect(() => {
@@ -56,7 +56,7 @@ const AdminGestion = () => {
 
   const loadProjects = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/projects');
+      const response = await fetch('https://api.abdelrahimriche.com/api/projects');
       const data = await response.json();
       setProjects(data);
     } catch (error) {
@@ -66,7 +66,7 @@ const AdminGestion = () => {
 
   const loadExperiences = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/experiences');
+      const response = await fetch('https://api.abdelrahimriche.com/api/experiences');
       const data = await response.json();
       setExperiences(data);
     } catch (error) {
@@ -79,8 +79,8 @@ const AdminGestion = () => {
     e.preventDefault();
     try {
       const url = editingProject 
-        ? `http://localhost:5000/api/admin/projects/${editingProject.id}`
-        : 'http://localhost:5000/api/admin/projects';
+        ? `https://api.abdelrahimriche.com/api/admin/projects/${editingProject.id}`
+        : 'https://api.abdelrahimriche.com/api/admin/projects';
       
       const method = editingProject ? 'PUT' : 'POST';
       
@@ -106,7 +106,7 @@ const AdminGestion = () => {
   const handleProjectDelete = async (id) => {
     if (confirm('Êtes-vous sûr de vouloir supprimer ce projet ?')) {
       try {
-        const response = await fetch(`http://localhost:5000/api/admin/projects/${id}`, {
+        const response = await fetch(`https://api.abdelrahimriche.com/api/admin/projects/${id}`, {
           method: 'DELETE'
         });
 
@@ -126,8 +126,8 @@ const AdminGestion = () => {
     e.preventDefault();
     try {
       const url = editingExperience 
-        ? `http://localhost:5000/api/admin/experiences/${editingExperience.id}`
-        : 'http://localhost:5000/api/admin/experiences';
+        ? `https://api.abdelrahimriche.com/api/admin/experiences/${editingExperience.id}`
+        : 'https://api.abdelrahimriche.com/api/admin/experiences';
       
       const method = editingExperience ? 'PUT' : 'POST';
       
@@ -153,7 +153,7 @@ const AdminGestion = () => {
   const handleExperienceDelete = async (id) => {
     if (confirm('Êtes-vous sûr de vouloir supprimer cette expérience ?')) {
       try {
-        const response = await fetch(`http://localhost:5000/api/admin/experiences/${id}`, {
+        const response = await fetch(`https://api.abdelrahimriche.com/api/admin/experiences/${id}`, {
           method: 'DELETE'
         });
 

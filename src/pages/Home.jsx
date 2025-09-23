@@ -25,17 +25,17 @@ const Home = () => {
 
     useEffect(() => {
         // Récupérer les données personnelles et statistiques
-        fetch('http://localhost:5000/api/personal')
+        fetch('https://api.abdelrahimriche.com/api/personal')
             .then(res => res.json())
             .then(data => setPersonalInfo(data))
             .catch(err => console.error('Erreur lors du chargement des infos personnelles:', err));
 
-        fetch('http://localhost:5000/api/stats')
+        fetch('https://api.abdelrahimriche.com/api/stats')
             .then(res => res.json())
             .then(data => setStats(data))
             .catch(err => console.error('Erreur lors du chargement des stats:', err));
 
-        fetch('http://localhost:5000/api/experiences')
+        fetch('https://api.abdelrahimriche.com/api/experiences')
             .then(res => res.json())
             .then(data => setExperiences(data))
             .catch(err => console.error('Erreur lors du chargement des expériences:', err));
@@ -270,7 +270,7 @@ const Home = () => {
                                         </div>
                                         <div className="timeline-date">{experience.duration}</div>
                                     </div>
-                                    
+
                                     <div className="timeline-body">
                                         <h3 className="position">{experience.position}</h3>
                                         <h4 className="company">
@@ -278,20 +278,22 @@ const Home = () => {
                                             <span className="location">📍 {experience.location}</span>
                                         </h4>
                                         <span className="contract-type">{experience.type}</span>
-                                        
+
                                         <p className="description">{experience.description}</p>
-                                        
-                                        <div className="technologies">
-                                            <h5>🔧 Technologies utilisées :</h5>
-                                            <div className="tech-tags">
-                                                {experience.technologies.map((tech, techIndex) => (
-                                                    <span key={techIndex} className="tech-tag">
-                                                        {tech}
-                                                    </span>
-                                                ))}
+
+                                        {experience.technologies.length > 0 && (
+                                            <div className="technologies">
+                                                <h5>🔧 Technologies utilisées :</h5>
+                                                <div className="tech-tags">
+                                                    {experience.technologies.map((tech, techIndex) => (
+                                                        <span key={techIndex} className="tech-tag">
+                                                            {tech}
+                                                        </span>
+                                                    ))}
+                                                </div>
                                             </div>
-                                        </div>
-                                        
+                                        )}
+
                                         <div className="achievements">
                                             <h5>🏆 Réalisations principales :</h5>
                                             <ul>

@@ -17,7 +17,7 @@ const Contact = () => {
 
   useEffect(() => {
     // Récupérer les informations personnelles
-    fetch('http://localhost:5000/api/personal')
+    fetch('https://api.abdelrahimriche.com/api/personal')
       .then(res => res.json())
       .then(data => setPersonalInfo(data))
       .catch(err => console.error('Erreur lors du chargement des infos:', err));

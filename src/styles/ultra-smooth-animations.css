@@ -1,0 +1,162 @@
+/* ========================================
+   OPTIMISATIONS GLOBALES ULTRA-FLUIDES
+   ======================================== */
+
+/* Optimisation générale du rendu */
+* {
+  will-change: auto;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Transitions ultra-rapides et fluides */
+*,
+*::before,
+*::after {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Remplace toutes les transitions existantes */
+[style*="transition"],
+.transition,
+button,
+a,
+input,
+textarea,
+select,
+.card,
+.button,
+.link {
+  transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Animations de hover ultra-rapides */
+button:hover,
+a:hover,
+.card:hover,
+.project-card:hover,
+.item-card:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  transition: all 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Optimisation des keyframes existantes */
+@keyframes ultra-smooth-bob {
+  0%, 100% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateY(2deg);
+  }
+}
+
+@keyframes ultra-smooth-wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+}
+
+@keyframes ultra-smooth-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.8), 0 0 30px rgba(76, 175, 80, 0.6);
+  }
+}
+
+@keyframes ultra-smooth-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes ultra-smooth-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Optimisations spécifiques pour les éléments du portfolio */
+.hero-title,
+.section-title,
+.admin-title {
+  animation: ultra-smooth-pulse 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+}
+
+.minecraft-head {
+  animation: ultra-smooth-bob 1s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+}
+
+.minecraft-hand {
+  animation: ultra-smooth-wave 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+}
+
+.project-card,
+.item-card {
+  animation: ultra-smooth-float 3s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+}
+
+.featured-project {
+  animation: ultra-smooth-glow 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+}
+
+/* Optimisation des scrolls */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* Performance GPU */
+.hero-section,
+.project-card,
+.item-card,
+.admin-page,
+.section {
+  transform: translateZ(0) !important;
+  will-change: transform, opacity !important;
+}
+
+/* Animations d'entrée ultra-fluides */
+@keyframes ultra-smooth-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in,
+.admin-content > *,
+.projects-grid > *,
+.hero-content > * {
+  animation: ultra-smooth-fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Optimisation des load states */
+.loading {
+  animation: ultra-smooth-pulse 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+}
+
+/* Anti-aliasing et optimisations visuelles */
+* {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+}
