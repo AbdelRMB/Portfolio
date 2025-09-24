@@ -53,7 +53,7 @@
   height: 120px;
   image-rendering: pixelated;
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
-  animation: steve-bob 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: steve-bob 4s ease-in-out infinite;
 }
 
 @keyframes steve-bob {
@@ -244,7 +244,7 @@
   box-shadow: 
     0 4px 8px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  animation: legendary-glow 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: legendary-glow 3s ease-in-out infinite;
 }
 
 @keyframes legendary-glow {
@@ -473,7 +473,7 @@
   height: 32px;
   background: linear-gradient(145deg, #8BC34A, #689F38);
   border: 2px solid #2E7D32;
-  animation: loading-bounce 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: loading-bounce 2s ease-in-out infinite;
 }
 
 .loading-block:nth-child(1) { animation-delay: 0s; }

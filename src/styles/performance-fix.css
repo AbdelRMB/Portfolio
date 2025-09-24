@@ -1,0 +1,79 @@
+/* ========================================
+   DÉSACTIVATION ANIMATIONS PROBLÉMATIQUES
+   ======================================== */
+
+/* Configuration de performance maximale */
+* {
+  --framer-motion-duration: 0s !important;
+}
+
+/* Optimisation globale du rendu */
+html, body {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Force GPU acceleration pour éléments critiques */
+.hero-section,
+.minecraft-header,
+.project-card:hover,
+.cta-button:hover {
+  transform: translateZ(0);
+}
+
+/* Désactive les transitions sur les éléments qui causent des lags */
+.projects-grid,
+.admin-content,
+.items-grid,
+.hero-content > *,
+.fade-in {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Optimisation des cartes - performance critique */
+.project-card,
+.item-card,
+.card {
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+.project-card:hover,
+.item-card:hover {
+  transform: translateY(-2px) !important;
+  transition: transform 0.2s ease !important;
+}
+
+/* Désactive les animations sur les grandes listes */
+.projects-grid > *,
+.items-grid > *,
+.admin-content > * {
+  animation-delay: 0s !important;
+  animation-duration: 0s !important;
+}
+
+/* Performance GPU - uniquement pour les éléments critiques */
+.minecraft-head,
+.minecraft-hand,
+.hero-section {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Simplifie les animations restantes */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Force la désactivation des animations complexes */
+.legendary-glow,
+.borderGlow,
+.shine,
+.float {
+  animation: none !important;
+}

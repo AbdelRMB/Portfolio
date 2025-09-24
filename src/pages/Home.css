@@ -124,7 +124,7 @@
     box-shadow:
         0 0 0 2px #2E7D32,
         0 8px 16px rgba(0, 0, 0, 0.3);
-    animation: bobHead 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: bobHead 3s ease-in-out infinite;
 }
 
 .face-icon {
@@ -139,7 +139,7 @@
 .wave-icon {
     display: inline-block;
     color: #FFD700;
-    animation: wave 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: wave 3.5s ease-in-out infinite;
     margin-left: 10px;
 }
 
@@ -219,12 +219,12 @@
 
 .typing-text {
     display: inline-block;
-    animation: fadeInOut 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: fadeInOut 4s ease-in-out infinite;
 }
 
 .cursor {
     color: #4CAF50;
-    animation: blink 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: blink 1.5s ease-in-out infinite;
     font-weight: bold;
 }
 
@@ -285,7 +285,7 @@
     border: 3px solid;
     position: relative;
     overflow: hidden;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -401,7 +401,7 @@
     top: 6px;
     left: 50%;
     transform: translateX(-50%);
-    animation: scrollMove 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: scrollMove 2.5s ease-in-out infinite;
 }
 
 @keyframes scrollMove {

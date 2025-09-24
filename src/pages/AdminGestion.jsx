@@ -325,11 +325,7 @@ const AdminGestion = () => {
 
             {/* Formulaire projet */}
             {showProjectForm && (
-              <motion.div
-                className="form-modal"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-              >
+              <div className="form-modal">
                 <form onSubmit={handleProjectSubmit} className="project-form">
                   <div className="form-header">
                     <h3>{editingProject ? 'Modifier le Projet' : 'Nouveau Projet'}</h3>
@@ -428,13 +424,13 @@ const AdminGestion = () => {
                     </button>
                   </div>
                 </form>
-              </motion.div>
+              </div>
             )}
 
             {/* Liste des projets */}
             <div className="items-grid">
               {projects.map(project => (
-                <motion.div
+                <div
                   key={project.id}
                   className="item-card"
                   whileHover={{ y: -5 }}
@@ -479,7 +475,7 @@ const AdminGestion = () => {
                       </a>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -500,7 +496,7 @@ const AdminGestion = () => {
 
             {/* Formulaire expérience */}
             {showExperienceForm && (
-              <motion.div
+              <div
                 className="form-modal"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -639,13 +635,13 @@ const AdminGestion = () => {
                     </button>
                   </div>
                 </form>
-              </motion.div>
+              </div>
             )}
 
             {/* Liste des expériences */}
             <div className="items-grid">
               {experiences.map(experience => (
-                <motion.div
+                <div
                   key={experience.id}
                   className="item-card"
                   whileHover={{ y: -5 }}
@@ -680,7 +676,7 @@ const AdminGestion = () => {
                       <span className="tech-more">+{experience.technologies.length - 3}</span>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
