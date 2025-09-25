@@ -1,95 +1,42 @@
-/* App.css - Portfolio Minecraft */
-
 #root {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-.app {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #87CEEB 0%, #98FB98 50%, #90EE90 100%);
-}
-
-/* Styles globaux pour le portfolio */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Courier New', monospace;
-  background: linear-gradient(135deg, #87CEEB 0%, #98FB98 50%, #90EE90 100%);
-  overflow-x: hidden;
-}
-
-/* Suppression des styles Vite par défaut */
 .logo {
-  display: none;
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.logo.react {
-  display: none;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
 }
 
 .read-the-docs {
-  display: none;
-}
-
-/* Styles pour les éléments interactifs */
-a {
-  color: #4CAF50;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #66BB6A;
-}
-
-button {
-  border-radius: 0;
-  border: 2px solid #4CAF50;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #66BB6A;
-  border-color: #66BB6A;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-button:focus,
-button:focus-visible {
-  outline: 2px solid #FFEB3B;
-  outline-offset: 2px;
-}
-
-/* Personnalisation pour le thème Minecraft */
-* {
-  box-sizing: border-box;
-}
-
-/* Conteneur principal */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 0.5rem;
-  }
+  color: #888;
 }

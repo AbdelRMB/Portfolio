@@ -202,7 +202,7 @@ app.post('/api/admin/projects', async (req, res) => {
     const [result] = await pool.execute(`
       INSERT INTO projects (title, description, technologies, image, github, demo, category, featured)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    `, [title, description, techString, image, github, demo, category, featured || false]);
+    `, [title, description, techString, image || '', github || '', demo || '', category, featured || false]);
     
     res.status(201).json({ id: result.insertId, message: 'Projet créé avec succès' });
   } catch (error) {
@@ -223,7 +223,7 @@ app.put('/api/admin/projects/:id', async (req, res) => {
       UPDATE projects 
       SET title = ?, description = ?, technologies = ?, image = ?, github = ?, demo = ?, category = ?, featured = ?
       WHERE id = ?
-    `, [title, description, techString, image, github, demo, category, featured || false, req.params.id]);
+    `, [title, description, techString, image || '', github || '', demo || '', category, featured || false, req.params.id]);
     
     if (result.affectedRows === 0) {
       return res.status(404).json({ message: 'Projet non trouvé' });
