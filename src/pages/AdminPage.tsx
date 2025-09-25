@@ -284,7 +284,7 @@ function ProjectsAdmin({
                 </h3>
                 <div className="flex gap-2">
                   <motion.button
-                    className="p-2 text-blue-400 hover:text-blue-300 transition-colors"
+                    className="p-2 text-blue-400 hover:text-blue-300 transition-colors z-[999]"
                     onClick={() => onEdit(project)}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -292,7 +292,7 @@ function ProjectsAdmin({
                     <Edit className="w-4 h-4" />
                   </motion.button>
                   <motion.button
-                    className="p-2 text-red-400 hover:text-red-300 transition-colors"
+                    className="p-2 text-red-400 hover:text-red-300 transition-colors z-[999]"
                     onClick={() => onDelete(project.id)}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}

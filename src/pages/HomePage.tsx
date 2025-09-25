@@ -103,8 +103,8 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 4 }}
         >
           {[
-            { icon: Github, href: "#", label: "GitHub", color: "hover:text-gray-300" },
-            { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-400" },
+            { icon: Github, href: "https://github.com/AbdelRMB", label: "GitHub", color: "hover:text-gray-300" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/abdelrahim-riche-504a88256/", label: "LinkedIn", color: "hover:text-blue-400" },
             { icon: Mail, href: "mailto:", label: "Email", color: "hover:text-purple-400" }
           ].map(({ icon: Icon, href, label, color }) => (
             <motion.a

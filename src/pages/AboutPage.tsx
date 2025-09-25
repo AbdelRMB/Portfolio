@@ -5,12 +5,16 @@ import HologramCard from '../components/galactic/HologramCard';
 
 export default function AboutPage() {
   const skills = [
-    { name: 'React & TypeScript', level: 90, color: 'from-blue-500 to-cyan-500', icon: '⚛️' },
+    { name: 'React TypeScript || React JavaScript', level: 90, color: 'from-blue-500 to-cyan-500', icon: '⚛️' },
     { name: 'Node.js & Express', level: 85, color: 'from-green-500 to-emerald-500', icon: '🟢' },
     { name: 'PHP & WordPress', level: 80, color: 'from-purple-500 to-violet-500', icon: '🐘' },
     { name: 'DevOps & Docker', level: 75, color: 'from-orange-500 to-red-500', icon: '🐳' },
     { name: 'Base de données', level: 85, color: 'from-yellow-500 to-amber-500', icon: '🗄️' },
-    { name: 'UI/UX Design', level: 70, color: 'from-pink-500 to-rose-500', icon: '🎨' }
+    { name: 'UI/UX Design', level: 95, color: 'from-pink-500 to-rose-500', icon: '🎨' },
+    { name: 'Java', level: 70, color: 'from-red-500 to-yellow-500', icon: '☕' },
+    { name: 'Python', level: 70, color: 'from-blue-400 to-blue-600', icon: '🐍' },
+    { name: 'C', level: 50, color: 'from-gray-400 to-gray-600', icon: '💻' },
+    { name: 'Linux & SysAdmin', level: 80, color: 'from-green-400 to-green-600', icon: '🐧' },
   ];
 
   const values = [
@@ -93,7 +97,7 @@ export default function AboutPage() {
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
                     Étudiant passionné en <span className="text-purple-400 font-semibold">BUT Informatique</span>, 
-                    actuellement en alternance chez <span className="text-blue-400 font-semibold">Still-Link</span> 
+                    actuellement en alternance chez <span className="text-blue-400 font-semibold">Still-Link</span>  
                     en tant que développeur Full-Stack et DevOps.
                   </p>
                   
