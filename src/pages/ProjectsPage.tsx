@@ -8,6 +8,7 @@ import { useProjects } from '../hooks/useAPI';
 export default function ProjectsPage() {
   const { projects, loading, error, refetch } = useProjects();
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expanded, setExpanded] = useState(false);
 
   const categories = ['all', ...Array.from(new Set(projects.map(p => p.category)))];
   const filteredProjects = selectedCategory === 'all' 
@@ -159,9 +160,16 @@ export default function ProjectsPage() {
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
+                  <p className={`text-gray-300 text-sm leading-relaxed ${expanded ? '' : 'line-clamp-3'}`}>
                     {project.description}
                   </p>
+
+                  <button
+                    className="text-blue-400 hover:text-blue-500 transition-colors text-sm font-semibold"
+                    onClick={() => setExpanded(!expanded)}
+                  >
+                    {expanded ? 'Voir moins' : 'Voir plus'}
+                  </button>
 
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
